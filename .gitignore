@@ -1,0 +1,11 @@
+# dossier de config local de l'agent
+.claude/
+
+# système
+.DS_Store
+Thumbs.db
+
+# éditeurs
+.vscode/
+.idea/
+*.swp
