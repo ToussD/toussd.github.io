@@ -1,6 +1,6 @@
-# holistic.dev — site vitrine
+# holistic.dev · site vitrine
 
-Site vitrine une-page de **HOLISTIC DEVELOPMENT** (EURL) — ingénierie logicielle
+Site vitrine une-page de **HOLISTIC DEVELOPMENT** (EURL), ingénierie logicielle
 freelance & modèles d'IA sur mesure (machine learning, deep learning).
 
 En ligne : **https://toussd.github.io**
@@ -9,10 +9,10 @@ En ligne : **https://toussd.github.io**
 
 100 % statique, fait main, aucune dépendance ni framework :
 
-- `index.html` — structure
-- `style.css` — thème « terminal » (JetBrains Mono)
-- `script.js` — effet de frappe, réseau de neurones en fond (canvas), easter egg console
-- `favicon.svg` — logo `>_`
+- `index.html` : structure
+- `style.css` : thème « terminal » (JetBrains Mono)
+- `script.js` : effet de frappe, réseau de neurones en fond (canvas), easter egg console
+- `favicon.svg` : logo `>_`
 
 ## Développement local
 
@@ -30,4 +30,4 @@ Hébergé sur **GitHub Pages** (site utilisateur). Tout push sur `main` met le s
 
 ---
 
-<sub>// codé à la main, sans template — et un peu trop de café ☕</sub>
+<sub>// codé à la main, sans template, et un peu trop de café ☕</sub>

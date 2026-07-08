@@ -1,5 +1,5 @@
 /* ============================================================
-   HOLISTIC DEVELOPMENT — script principal
+   HOLISTIC DEVELOPMENT · script principal
    Vanilla JS, zéro dépendance.
    ============================================================ */
 (() => {
@@ -10,6 +10,13 @@
   /* -------- Année du footer -------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* -------- Email de contact (anti-bot : assemblé au runtime) -------- */
+  document.querySelectorAll("a.mail[data-user][data-domain]").forEach((el) => {
+    const addr = el.dataset.user + "@" + el.dataset.domain;
+    el.setAttribute("href", "mailto:" + addr);
+    el.setAttribute("title", "Écrire à " + addr);
+  });
 
   /* -------- Effet de frappe dans le terminal -------- */
   const typedEl = document.getElementById("typed");
@@ -122,7 +129,7 @@
     " | || |/ _ \\| |  |_ _/ __|_   _|_ _/ __|\n" +
     " | __ | (_) | |__ | |\\__ \\ | |  | | (__ \n" +
     " |_||_|\\___/|____|___|___/ |_| |___\\___|\n" +
-    " HOLISTIC DEVELOPMENT — tu inspectes le code ? on va bien s'entendre.",
+    " HOLISTIC DEVELOPMENT · tu inspectes le code ? on va bien s'entendre.",
     style
   );
   console.log("%c// tu cherches un dev IA ? cat specialite.md → ML · DL · sur mesure", "color:#6b7688;font-family:monospace");
