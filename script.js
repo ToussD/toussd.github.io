@@ -23,6 +23,7 @@
   if (typedEl) {
     const commands = [
       "python train.py --probleme votre_cas",
+      "git init studio/████████",
       "git commit -m 'ça compile ET ça marche'",
       "./deploy.sh --et-ca-tient-en-prod",
       "make coffee && think",
@@ -133,4 +134,5 @@
     style
   );
   console.log("%c// tu cherches un dev IA ? cat specialite.md → ML · DL · sur mesure", "color:#6b7688;font-family:monospace");
+  console.log("%c// et non, les noms des apps du studio ne sont pas dans le DOM. bien tenté.", "color:#6b7688;font-family:monospace");
 })();
