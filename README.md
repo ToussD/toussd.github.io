@@ -1,26 +1,44 @@
 # holistic.dev · site vitrine
 
 Site vitrine de **HOLISTIC DEVELOPMENT** (EURL), la société de David Toussaint.
-Deux pôles, trois pages, deux identités visuelles.
 
 En ligne : **https://toussd.github.io**
 
+## Ce que le site doit dire, et surtout ne pas dire
+
+David porte **deux casquettes**, et le site existe pour que le visiteur ne les confonde
+pas :
+
+- **HOLISTIC DEVELOPMENT** (EURL, David gérant) ne porte **qu'une seule activité en
+  propre : le studio** d'applications mobiles.
+- **Le conseil et la formation passent par [MoveNext](https://www.movenext.fr/)**, la
+  société que David dirige avec **Ionut Mihalcea** (architecte logiciel et leader
+  technique, président). Lui l'architecture et le craft, David l'IA.
+
+Ne jamais laisser entendre que l'EURL vend des prestations de services : elle en est
+capable, mais ce n'est pas par elle qu'elles se facturent. Les compétences de David
+sont bien présentées sur l'accueil, mais comme un savoir-faire personnel, avec un
+encadré (`.callout`) qui renvoie vers MoveNext.
+
+## Les trois pages
+
 | Page | Rôle | Identité |
 | --- | --- | --- |
-| `index.html` | Le hub : la marque, deux portes. | Terminal (sombre) |
+| `index.html` | David et sa société : whoami, savoir-faire, stack, deux portes. | Terminal (sombre) |
 | `studio.html` | Le studio d'applications mobiles. | Plein air (clair) |
-| `services.html` | Le freelance : IA, ingénierie, formations. | Terminal (sombre) |
+| `services.html` | Passerelle : explique le duo, puis renvoie vers movenext.fr. | Terminal (sombre) |
 
-- **Le studio** : applications mobiles autour du mouvement, du plein air et du jeu.
-  4 à 5 apps sur les 12 prochains mois. Les noms sont volontairement caviardés tant
-  que rien n'est sorti. Pour faire avancer une app, changer sa classe de badge :
-  `is-concept` → `is-dev` → `is-beta` → `is-live` (section « les apps »).
-- **Les services** : ingénierie logicielle freelance, modèles d'IA sur mesure
-  (machine learning, deep learning) et formations. 10+ ans d'expérience.
+`services.html` est une **passerelle, pas une redirection** : le visiteur doit
+comprendre pourquoi il change de société avant de cliquer. C'est délibéré, ne pas la
+remplacer par un `meta refresh`.
 
-Le studio assume une identité distincte : il quitte l'esthétique terminal pour un
+Le studio, lui, assume une identité distincte : il quitte l'esthétique terminal pour un
 registre clair et large (typo Outfit, sable, vert forêt et orange). Le lien avec la
 marque mère se fait par le pied de page sombre et les micro-éléments en monospace.
+
+Pour faire avancer une app du studio, changer sa classe de badge :
+`is-concept` → `is-dev` → `is-beta` → `is-live`. Les noms restent caviardés tant que
+rien n'est sorti.
 
 ## Stack
 
@@ -38,9 +56,10 @@ sur `#typed` (un tableau JSON).
 
 ### Compatibilité des anciens liens
 
-Le site était auparavant une seule page. `script.js` redirige les ancres déjà
-indexées (`#studio`, `#services`, `#whoami`, `#stack`, `#pourquoi`) vers leur
-nouvelle page. Ne pas retirer ce bloc.
+Le site était auparavant une seule page. `script.js` redirige les deux ancres qui ont
+changé de page (`#studio`, `#services`) vers leur nouvelle destination. Les autres
+(`#whoami`, `#stack`, `#pourquoi`) existent toujours sur l'accueil et n'ont donc pas
+besoin de redirection. Ne pas retirer ce bloc.
 
 ## Développement local
 

@@ -8,15 +8,12 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* -------- Anciennes ancres du site une-page → nouvelles pages --------
-     Le contenu a été éclaté en index / studio / services : on ne casse pas
-     les liens déjà indexés ni les favoris. */
+     Le studio et les services ont leur propre page désormais. Les autres
+     ancres (#whoami, #stack, #pourquoi) existent toujours sur l'accueil. */
   if (document.body.dataset.page === "hub") {
     const moved = {
       "#studio": "studio.html",
       "#services": "services.html",
-      "#whoami": "services.html#whoami",
-      "#stack": "services.html#stack",
-      "#pourquoi": "services.html#pourquoi",
     };
     const destination = moved[window.location.hash];
     if (destination) {

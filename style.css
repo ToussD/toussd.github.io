@@ -280,33 +280,11 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 2.4
 .whoami-quote::before { content: "> "; color: var(--txt-mute); }
 .whoami-track { margin-top: 1.1rem; font-size: 0.85rem; color: var(--txt); }
 
-/* ---------- Hub (page d'accueil) ---------- */
-.hub-hero {
-  padding: clamp(3rem, 9vw, 6rem) 0 clamp(1.5rem, 4vw, 2.5rem);
-  text-align: center;
-}
-.hub-hero h1 {
-  font-size: clamp(2.4rem, 8vw, 4.4rem);
-  line-height: 1.02;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.3rem;
-}
-.hub-hero h1 .accent { color: var(--accent); }
-.hub-hero .lede { max-width: 62ch; margin: 0 auto; }
-
-.hub-term {
-  max-width: 720px;
-  margin: clamp(2.2rem, 6vw, 3.4rem) auto 0;
-  text-align: left;
-}
-
-/* les deux portes */
+/* ---------- Portes vers les deux activités ---------- */
 .gates {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  padding-bottom: clamp(3rem, 8vw, 5rem);
 }
 .gate {
   display: flex;
@@ -325,8 +303,9 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 2.4
   box-shadow: 0 18px 40px -26px rgba(0,0,0,0.9);
 }
 .gate-path { font-size: 0.78rem; margin-bottom: 0.7rem; opacity: 0.85; }
-.gate h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.6rem; }
+.gate h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.6rem; }
 .gate-desc { flex: 1; color: var(--txt-dim); font-size: 0.92rem; }
+.gate-desc strong { color: var(--txt); }
 .gate-foot {
   display: flex;
   align-items: center;
@@ -342,13 +321,53 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 2.4
 .gate .arrow { display: inline-block; transition: transform .18s ease; }
 .gate:hover .arrow { transform: translateX(4px); }
 
-/* le studio annonce déjà sa couleur (ambre), les services gardent la menthe */
+/* le studio annonce sa couleur (ambre) ; MoveNext est ailleurs, donc bleu */
 .gate-studio .gate-path,
 .gate-studio .gate-go { color: var(--accent-2); }
 .gate-studio:hover { border-color: rgba(255,180,84,0.45); }
-.gate-services .gate-path,
-.gate-services .gate-go { color: var(--accent); }
-.gate-services:hover { border-color: rgba(95,242,192,0.45); }
+.gate-partner .gate-path,
+.gate-partner .gate-go { color: var(--accent-3); }
+.gate-partner:hover { border-color: rgba(122,162,247,0.45); }
+
+/* ---------- MoveNext : tout ce qui pointe vers l'extérieur ---------- */
+.partner { color: var(--accent-3); }
+
+.btn.partner {
+  background: var(--accent-3);
+  border-color: var(--accent-3);
+  color: var(--bg);
+}
+.btn.partner:hover {
+  color: var(--bg);
+  box-shadow: 0 0 0 3px rgba(122,162,247,0.18);
+}
+
+.ext { color: var(--accent-3); }
+.ext:hover { color: var(--accent); }
+.ext .arrow { font-size: 0.85em; }
+
+/* ---------- Encadré de mise au point ---------- */
+.callout {
+  max-width: 68ch;
+  margin-bottom: 1.8rem;
+  padding: 0.95rem 1.1rem;
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--accent-3);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--txt-dim);
+  font-size: 0.89rem;
+  line-height: 1.6;
+}
+.callout-tag { color: var(--accent-3); margin-right: 0.5rem; }
+.callout em { color: var(--txt); font-style: normal; }
+
+/* rôle sous un nom, dans les cartes du duo */
+.card-role {
+  color: var(--txt-mute);
+  font-size: 0.78rem;
+  margin-bottom: 0.7rem;
+}
 
 /* ---------- Contact ---------- */
 .contact-line { margin-top: 1.5rem; font-size: 1rem; }

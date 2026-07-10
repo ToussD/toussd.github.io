@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HOLISTIC DEVELOPMENT · Studio d'apps mobiles &amp; ingénierie IA</title>
-  <meta name="description" content="HOLISTIC DEVELOPMENT, EURL de David Toussaint. Deux pôles : un studio d'applications mobiles (mouvement, plein air, jeu) et l'ingénierie logicielle freelance spécialisée dans les modèles d'IA sur mesure (machine learning, deep learning)." />
+  <title>HOLISTIC DEVELOPMENT · David Toussaint, ingénieur IA &amp; studio d'apps mobiles</title>
+  <meta name="description" content="HOLISTIC DEVELOPMENT, EURL de David Toussaint, développeur IA senior à Toulouse. La société porte un studio d'applications mobiles. Les prestations de conseil et de formation sont portées par MoveNext, avec Ionut Mihalcea." />
   <meta name="author" content="HOLISTIC DEVELOPMENT" />
   <meta name="theme-color" content="#0a0d13" />
   <link rel="canonical" href="https://toussd.github.io/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="HOLISTIC DEVELOPMENT · Studio d'apps mobiles &amp; ingénierie IA" />
-  <meta property="og:description" content="Un studio d'applications mobiles qui font bouger, et 10+ ans d'ingénierie IA sur mesure (ML / DL)." />
+  <meta property="og:title" content="HOLISTIC DEVELOPMENT · David Toussaint, ingénieur IA" />
+  <meta property="og:description" content="10+ ans d'ingénierie IA, un studio d'applications mobiles, et les services portés par MoveNext." />
   <meta property="og:url" content="https://toussd.github.io/" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -30,75 +30,281 @@
       <span class="brand-name">holistic<span class="dim">.dev</span></span>
     </a>
     <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#whoami">whoami</a>
+      <a href="#savoir-faire">savoir-faire</a>
+      <a href="#stack">stack</a>
       <a href="studio.html">studio</a>
       <a href="services.html">services</a>
     </nav>
   </header>
 
-  <main id="top" class="hub">
+  <main id="top">
 
-    <section class="hub-hero">
-      <p class="kicker">// EURL · deux pôles, un même mot</p>
-      <h1>
-        HOLISTIC<br />
-        <span class="accent">DEVELOPMENT</span><span class="caret">_</span>
-      </h1>
-      <p class="lede">
-        D'un côté, un <strong>studio d'applications mobiles</strong> : mouvement, plein air, jeu.
-        De l'autre, des <strong>modèles d'IA sur mesure</strong> et l'ingénierie solide qui va autour.
-        <span class="dim">Ça fait 10+ ans que ça dure, et j'aime toujours ça.</span>
-      </p>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="kicker">// EURL · David Toussaint · Toulouse</p>
+        <h1>
+          HOLISTIC<br />
+          <span class="accent">DEVELOPMENT</span><span class="caret">_</span>
+        </h1>
+        <p class="lede">
+          Ma société. Elle porte un <strong>studio d'applications mobiles</strong> que je
+          construis seul. Mon travail d'<strong>ingénieur IA</strong>, lui, se fait avec
+          <a href="services.html">MoveNext</a>.
+          <span class="dim">Ça fait 10+ ans que ça dure, et j'aime toujours ça.</span>
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="studio.html">./le_studio.sh</a>
+          <a class="btn ghost" href="services.html">./les_services.sh</a>
+        </div>
+      </div>
 
-      <div class="terminal hub-term">
+      <div class="terminal">
         <div class="term-bar">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
           <span class="term-title">holistic@dev: ~</span>
         </div>
         <div class="term-body">
+          <p><span class="prompt">holistic@dev:~$</span> whoami</p>
+          <p class="out">david toussaint · développeur IA senior · Toulouse</p>
+          <p><span class="prompt">holistic@dev:~$</span> cat casquettes.md</p>
+          <p class="out"><span class="hash">#</span> HOLISTIC DEVELOPMENT · gérant · le studio</p>
+          <p class="out"><span class="hash">#</span> MoveNext · directeur · le conseil &amp; la formation</p>
           <p><span class="prompt">holistic@dev:~$</span> ls -F</p>
           <p class="out dir-out">
             <a class="dir" href="studio.html">studio/</a>
-            <a class="dir" href="services.html">services/</a>
-            <span class="hash"># deux activités, une seule tête</span>
+            <a class="dir" href="services.html">services@</a>
+            <span class="hash"># le second est un lien symbolique</span>
           </p>
-          <p><span class="prompt">holistic@dev:~$</span> cat README.md</p>
-          <p class="out"><span class="hash">#</span> David Toussaint, ingénieur IA &amp; logiciel, Toulouse.</p>
+          <p><span class="prompt">holistic@dev:~$</span> uptime</p>
+          <p class="out">10+ ans en prod, 0 hype gratuite.</p>
           <p class="term-live"><span class="prompt">holistic@dev:~$</span> <span id="typed"
-            data-commands='["cd studio/ &amp;&amp; ./build_something_fun.sh","cd services/ &amp;&amp; python train.py --probleme votre_cas","make coffee &amp;&amp; think"]'></span><span class="cursor">▋</span></p>
+            data-commands='["python train.py --probleme votre_cas","cd studio/ &amp;&amp; ./build_something_fun.sh","git commit -m &apos;ça compile ET ça marche&apos;","make coffee &amp;&amp; think"]'></span><span class="cursor">▋</span></p>
         </div>
       </div>
     </section>
 
-    <section class="gates" aria-label="Les deux pôles">
+    <!-- ============ WHOAMI ============ -->
+    <section id="whoami" class="section">
+      <h2 class="section-title"><span class="c">//</span> whoami</h2>
+      <div class="whoami-grid">
 
-      <a class="gate gate-studio" href="studio.html">
-        <p class="gate-path">~/studio</p>
-        <h2>Le studio</h2>
-        <p class="gate-desc">
-          Quatre à cinq applications mobiles sur les douze prochains mois. Des apps qui
-          vous font lever du canapé plutôt que scroller dessus : le mouvement, le monde
-          réel, le jeu, et de l'IA seulement là où elle sert vraiment.
-        </p>
-        <p class="gate-foot">
-          <span class="gate-tag">[ 5 apps · noms classifiés ]</span>
-          <span class="gate-go">ouvrir <span class="arrow">→</span></span>
-        </p>
-      </a>
+        <figure class="portrait">
+          <img src="david.jpg"
+               alt="David Toussaint présentant un notebook de machine learning"
+               width="1000" height="790" loading="lazy" decoding="async" />
+          <figcaption>
+            <span class="portrait-name">David Toussaint</span>
+            <span class="portrait-role">// développeur IA senior · Toulouse</span>
+          </figcaption>
+        </figure>
 
-      <a class="gate gate-services" href="services.html">
-        <p class="gate-path">~/services</p>
-        <h2>Les services</h2>
-        <p class="gate-desc">
-          Ingénierie logicielle freelance et modèles d'IA sur mesure : machine learning,
-          deep learning, du problème métier mal défini jusqu'au modèle qui tient en
-          production. Et des formations, parce que transmettre fait partie du métier.
-        </p>
-        <p class="gate-foot">
-          <span class="gate-tag">[ freelance · 10+ ans ]</span>
-          <span class="gate-go">ouvrir <span class="arrow">→</span></span>
-        </p>
-      </a>
+        <div class="prose">
+          <p>
+            Derrière <strong>HOLISTIC&nbsp;DEVELOPMENT</strong>, il y a
+            <strong>David&nbsp;Toussaint</strong>, développeur IA senior basé à
+            <span class="accent">Toulouse</span>, et une conviction toute simple :
+            un bon logiciel, c'est un <em>système qu'on comprend en entier</em>,
+            pas juste la ligne de code du vendredi soir.
+          </p>
+          <p>
+            Plus de <strong>10&nbsp;ans</strong> à construire, apprendre et transmettre
+            autour de l'IA et du logiciel : du problème métier mal défini jusqu'au modèle
+            en production qui tient la route. Pas de recette magique recopiée d'un
+            tutoriel, mais des modèles pensés pour <strong>votre</strong> problème et
+            <strong>vos</strong> données.
+          </p>
+          <p>
+            Aujourd'hui, mon travail tient sur deux jambes. Sous HOLISTIC&nbsp;DEVELOPMENT,
+            ma société, je conçois mes propres applications mobiles : c'est
+            <a href="studio.html">le studio</a>. Et je dirige
+            <strong>MoveNext</strong> aux côtés d'<strong>Ionut&nbsp;Mihalcea</strong>,
+            architecte logiciel et leader technique : c'est par
+            <a href="services.html">MoveNext</a> que passent nos prestations. Lui
+            l'architecture et le craft, moi l'intelligence artificielle. À deux, on couvre
+            bien plus large que chacun dans son coin.
+          </p>
+          <p class="whoami-quote">L'IA doit rester une extension de l'intelligence humaine, jamais une fin en soi.</p>
+          <p class="whoami-track"><span class="dim">// projets marquants :</span> Airbus · Medexprim · Boostheat · Spigao · Akawan · Finvens · Iris Prevention</p>
+        </div>
 
+      </div>
+    </section>
+
+    <!-- ============ SAVOIR-FAIRE ============ -->
+    <section id="savoir-faire" class="section">
+      <h2 class="section-title">
+        <span class="c">//</span> ce que je sais faire
+        <span class="title-tag">[ IA · ingénierie · production · formation ]</span>
+      </h2>
+
+      <p class="callout">
+        <span class="callout-tag">// note</span>
+        Ce sont mes compétences, pas le catalogue de l'EURL. Ces missions,
+        je les mène avec <a href="services.html">MoveNext</a> : c'est elle qui
+        porte le conseil et la formation.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+          <p class="card-path">~/models</p>
+          <h3>Modèles d'IA sur mesure</h3>
+          <p>
+            Machine learning, deep learning, du classifieur au réseau de neurones bien
+            profond. Entraînés, validés et documentés pour votre cas, pas un
+            <code>model.fit()</code> collé au hasard.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="card-path">~/engineering</p>
+          <h3>Ingénierie logicielle</h3>
+          <p>
+            APIs, back-ends, data pipelines, outils internes. L'IA c'est bien, mais
+            sans plomberie solide autour, ça reste une démo. Je fais les deux.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="card-path">~/production</p>
+          <h3>Du notebook à la prod</h3>
+          <p>
+            Un notebook qui tourne <span class="ne">&ne;</span> un produit. Je fais le pont :
+            packaging, déploiement, monitoring, MLOps. Bref, que ça survive après la démo.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="card-path">~/advice</p>
+          <h3>Conseil &amp; architecture</h3>
+          <p>
+            Parfois le meilleur service, c'est un avis honnête sur la faisabilité,
+            <span class="dim">avant</span> de cramer le budget GPU. Cadrage, choix techniques,
+            second regard.
+          </p>
+        </article>
+
+        <article class="card card-wide">
+          <p class="card-path">~/training</p>
+          <h3>Formations IA &amp; ML</h3>
+          <p>
+            Je suis aussi <strong>formateur</strong> : je dispense des formations sur
+            l'intelligence artificielle et le machine learning, du concept qui tient la
+            route jusqu'aux mains dans le code. Parce que transmettre, c'est la moitié
+            du métier. <span class="dim">Elles se réservent chez MoveNext.</span>
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ STACK ============ -->
+    <section id="stack" class="section">
+      <h2 class="section-title"><span class="c">//</span> stack &amp; outils</h2>
+      <p class="prose slim">Les briques que j'utilise le plus. La liste bouge selon le projet : l'outil sert le problème, jamais l'inverse.</p>
+
+      <div class="stack-group">
+        <p class="stack-label">$ IA / ML</p>
+        <ul class="tags">
+          <li>Python</li><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li>
+          <li>NumPy</li><li>Pandas</li><li>Hugging&nbsp;Face</li><li>ONNX</li>
+        </ul>
+      </div>
+
+      <div class="stack-group">
+        <p class="stack-label">$ ingénierie / ops</p>
+        <ul class="tags">
+          <li>FastAPI</li><li>Docker</li><li>PostgreSQL</li><li>Git</li>
+          <li>Linux</li><li>CI/CD</li><li>Cloud</li><li>SQL</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ OÙ ÇA SE PASSE ============ -->
+    <section id="activites" class="section">
+      <h2 class="section-title">
+        <span class="c">//</span> où ça se passe
+        <span class="title-tag">[ deux structures, un seul bonhomme ]</span>
+      </h2>
+
+      <div class="gates">
+
+        <a class="gate gate-studio" href="studio.html">
+          <p class="gate-path">~/studio</p>
+          <h3>Le studio</h3>
+          <p class="gate-desc">
+            Quatre à cinq applications mobiles sur les douze prochains mois, autour du
+            mouvement, du plein air et du jeu. Je les conçois seul, sous
+            HOLISTIC&nbsp;DEVELOPMENT. C'est la seule activité que la société porte
+            en propre.
+          </p>
+          <p class="gate-foot">
+            <span class="gate-tag">[ 5 apps · noms classifiés ]</span>
+            <span class="gate-go">ouvrir <span class="arrow">→</span></span>
+          </p>
+        </a>
+
+        <a class="gate gate-partner" href="services.html">
+          <p class="gate-path">~/services</p>
+          <h3>Les services</h3>
+          <p class="gate-desc">
+            Conseil et formation, en IA comme en architecture logicielle. Ils ne passent
+            pas par cette société mais par <strong>MoveNext</strong>, que je dirige avec
+            Ionut&nbsp;Mihalcea. Deux séniorités qui se complètent plutôt qu'un
+            freelance seul.
+          </p>
+          <p class="gate-foot">
+            <span class="gate-tag">[ via MoveNext ]</span>
+            <span class="gate-go">comprendre <span class="arrow">→</span></span>
+          </p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============ POURQUOI ============ -->
+    <section id="pourquoi" class="section">
+      <h2 class="section-title"><span class="c">//</span> pourquoi « holistic » ?</h2>
+      <div class="prose">
+        <blockquote>
+          <p>
+            <span class="accent">Holistique</span>, c'est regarder le tout plutôt que la pièce
+            détachée. Et ça marche dans les deux sens.
+          </p>
+          <p>
+            <strong>Côté ingénierie</strong>, c'est le système entier : un modèle d'IA n'existe
+            jamais tout seul. Il vit au milieu de données, d'utilisateurs, de contraintes métier,
+            de serveurs qui tombent à 3h du matin.
+          </p>
+          <p>
+            <strong>Côté studio</strong>, c'est l'humain entier : le corps, le mouvement, le
+            terrain, le plaisir de jouer. <a href="studio.html">Mes apps</a> ne cherchent pas à
+            vous garder sur le canapé, plutôt l'inverse.
+          </p>
+          <p>
+            Même mot, deux lectures. C'est comme ça qu'on livre quelque chose qui
+            <strong>tient</strong>.
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <h2 class="section-title"><span class="c">//</span> parlons-en</h2>
+      <div class="prose">
+        <p>
+          Une question sur le studio, une envie de parler d'IA, ou juste un bonjour ?
+          <span class="dim">Pour une mission ou une formation, le bon interlocuteur est
+          <a href="services.html">MoveNext</a>.</span>
+        </p>
+        <p class="contact-line">
+          <span class="prompt">$</span>
+          <a class="mail" data-user="toussaint.david" data-domain="hotmail.fr">toussaint.david<span class="at">[at]</span>hotmail.fr</a>
+        </p>
+      </div>
     </section>
 
   </main>
@@ -106,7 +312,8 @@
   <footer class="footer">
     <div class="footer-inner">
       <p class="foot-brand"><span class="brand-mark">&gt;_</span> HOLISTIC DEVELOPMENT</p>
-      <p class="dim">EURL · studio d'apps mobiles &amp; ingénierie IA · <span id="year">2026</span></p>
+      <p class="dim">EURL de David Toussaint · le studio d'apps mobiles · <span id="year">2026</span></p>
+      <p class="foot-note">// <a href="studio.html">le studio</a> · <a href="services.html">les services (MoveNext)</a></p>
       <p class="foot-note">// site codé à la main, sans template, et un peu trop de café ☕</p>
       <p class="foot-note">// contact : <a class="mail" data-user="toussaint.david" data-domain="hotmail.fr">toussaint.david<span class="at">[at]</span>hotmail.fr</a></p>
     </div>
