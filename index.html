@@ -4,15 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HOLISTIC DEVELOPMENT · Studio d'apps mobiles &amp; ingénierie IA</title>
-  <meta name="description" content="HOLISTIC DEVELOPMENT, EURL de David Toussaint : studio d'applications mobiles (mouvement, plein air, jeu) et ingénierie logicielle freelance spécialisée dans les modèles d'IA sur mesure (machine learning, deep learning). Plus de 10 ans d'expérience." />
+  <meta name="description" content="HOLISTIC DEVELOPMENT, EURL de David Toussaint. Deux pôles : un studio d'applications mobiles (mouvement, plein air, jeu) et l'ingénierie logicielle freelance spécialisée dans les modèles d'IA sur mesure (machine learning, deep learning)." />
   <meta name="author" content="HOLISTIC DEVELOPMENT" />
   <meta name="theme-color" content="#0a0d13" />
+  <link rel="canonical" href="https://toussd.github.io/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="HOLISTIC DEVELOPMENT · Studio d'apps mobiles &amp; ingénierie IA" />
   <meta property="og:description" content="Un studio d'applications mobiles qui font bouger, et 10+ ans d'ingénierie IA sur mesure (ML / DL)." />
-  <meta property="og:url" content="https://toussd.github.io" />
+  <meta property="og:url" content="https://toussd.github.io/" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,323 +21,84 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-page="hub">
   <canvas id="bg" aria-hidden="true"></canvas>
 
   <header class="nav">
-    <a class="brand" href="#top" aria-label="Accueil">
+    <a class="brand" href="./" aria-label="Accueil">
       <span class="brand-mark">&gt;_</span>
       <span class="brand-name">holistic<span class="dim">.dev</span></span>
     </a>
     <nav class="nav-links" aria-label="Navigation principale">
-      <a href="#whoami">whoami</a>
-      <a href="#studio">studio</a>
-      <a href="#services">services</a>
-      <a href="#stack">stack</a>
-      <a href="#pourquoi">pourquoi</a>
+      <a href="studio.html">studio</a>
+      <a href="services.html">services</a>
     </nav>
   </header>
 
-  <main id="top">
+  <main id="top" class="hub">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="kicker">// EURL · studio d'apps mobiles &amp; ingénierie IA</p>
-        <h1>
-          HOLISTIC<br />
-          <span class="accent">DEVELOPMENT</span><span class="caret">_</span>
-        </h1>
-        <p class="lede">
-          D'un côté, un <strong>studio d'applications mobiles</strong> : mouvement, plein air, jeu.
-          De l'autre, des <strong>modèles d'IA sur mesure</strong> et l'ingénierie solide qui va autour.
-          <span class="dim">Ça fait 10+ ans que ça dure, et j'aime toujours ça.</span>
-        </p>
-        <div class="hero-actions">
-          <a class="btn" href="#studio">./le_studio.sh</a>
-          <a class="btn ghost" href="#services">./les_services.sh</a>
-        </div>
-      </div>
+    <section class="hub-hero">
+      <p class="kicker">// EURL · deux pôles, un même mot</p>
+      <h1>
+        HOLISTIC<br />
+        <span class="accent">DEVELOPMENT</span><span class="caret">_</span>
+      </h1>
+      <p class="lede">
+        D'un côté, un <strong>studio d'applications mobiles</strong> : mouvement, plein air, jeu.
+        De l'autre, des <strong>modèles d'IA sur mesure</strong> et l'ingénierie solide qui va autour.
+        <span class="dim">Ça fait 10+ ans que ça dure, et j'aime toujours ça.</span>
+      </p>
 
-      <div class="terminal" role="img" aria-label="Fenêtre de terminal présentant l'activité">
+      <div class="terminal hub-term">
         <div class="term-bar">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
           <span class="term-title">holistic@dev: ~</span>
         </div>
         <div class="term-body">
-          <p><span class="prompt">holistic@dev:~$</span> whoami</p>
-          <p class="out">ingénieur logiciel freelance · studio d'apps mobiles</p>
-          <p><span class="prompt">holistic@dev:~$</span> cat specialite.md</p>
-          <p class="out"><span class="hash">#</span> IA sur mesure · Machine&nbsp;Learning · Deep&nbsp;Learning</p>
-          <p><span class="prompt">holistic@dev:~$</span> ls ~/studio/</p>
-          <p class="out ls-out">
-            <span class="redacted" role="img" aria-label="nom confidentiel">██████</span>
-            <span class="redacted" role="img" aria-label="nom confidentiel">████████</span>
-            <span class="redacted" role="img" aria-label="nom confidentiel">█████</span>
-            <span class="redacted" role="img" aria-label="nom confidentiel">███████</span>
-            <span class="redacted" role="img" aria-label="nom confidentiel">██████</span>
-            <span class="hash"># bientôt™</span>
+          <p><span class="prompt">holistic@dev:~$</span> ls -F</p>
+          <p class="out dir-out">
+            <a class="dir" href="studio.html">studio/</a>
+            <a class="dir" href="services.html">services/</a>
+            <span class="hash"># deux activités, une seule tête</span>
           </p>
-          <p><span class="prompt">holistic@dev:~$</span> uptime</p>
-          <p class="out">10+ ans en prod, 0 hype gratuite.</p>
-          <p class="term-live"><span class="prompt">holistic@dev:~$</span> <span id="typed"></span><span class="cursor">▋</span></p>
+          <p><span class="prompt">holistic@dev:~$</span> cat README.md</p>
+          <p class="out"><span class="hash">#</span> David Toussaint, ingénieur IA &amp; logiciel, Toulouse.</p>
+          <p class="term-live"><span class="prompt">holistic@dev:~$</span> <span id="typed"
+            data-commands='["cd studio/ &amp;&amp; ./build_something_fun.sh","cd services/ &amp;&amp; python train.py --probleme votre_cas","make coffee &amp;&amp; think"]'></span><span class="cursor">▋</span></p>
         </div>
       </div>
     </section>
 
-    <!-- ============ WHOAMI ============ -->
-    <section id="whoami" class="section">
-      <h2 class="section-title"><span class="c">//</span> whoami</h2>
-      <div class="whoami-grid">
+    <section class="gates" aria-label="Les deux pôles">
 
-        <figure class="portrait">
-          <img src="david.jpg"
-               alt="David Toussaint présentant un notebook de machine learning"
-               width="1000" height="790" loading="lazy" decoding="async" />
-          <figcaption>
-            <span class="portrait-name">David Toussaint</span>
-            <span class="portrait-role">// ingénieur IA &amp; logiciel · Toulouse</span>
-          </figcaption>
-        </figure>
-
-        <div class="prose">
-          <p>
-            Derrière <strong>HOLISTIC&nbsp;DEVELOPMENT</strong>, il y a
-            <strong>David&nbsp;Toussaint</strong>, développeur IA senior basé à
-            <span class="accent">Toulouse</span>, et une conviction toute simple :
-            un bon logiciel, c'est un <em>système qu'on comprend en entier</em>,
-            pas juste la ligne de code du vendredi soir.
-          </p>
-          <p>
-            Plus de <strong>10&nbsp;ans</strong> à construire, apprendre et transmettre
-            autour de l'IA et du logiciel. Concrètement, j'aide les entreprises qui veulent
-            de l'IA <span class="accent">qui marche vraiment</span> : du problème métier mal
-            défini jusqu'au modèle en production qui tient la route. Pas de recette magique
-            recopiée d'un tutoriel, mais des modèles pensés pour <strong>votre</strong> problème
-            et <strong>vos</strong> données.
-          </p>
-          <p>
-            Depuis peu, une seconde activité : un <strong>studio d'applications mobiles</strong>,
-            où je conçois mes propres produits. Les deux se nourrissent. Ce que j'apprends en
-            construisant mes apps finit chez mes clients, et ce que je construis pour mes clients
-            finit dans mes apps.
-          </p>
-          <p class="whoami-quote">L'IA doit rester une extension de l'intelligence humaine, jamais une fin en soi.</p>
-          <p class="whoami-track"><span class="dim">// projets marquants :</span> Airbus · Medexprim · Boostheat · Spigao · Akawan · Finvens · Iris Prevention</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ STUDIO ============ -->
-    <section id="studio" class="section">
-      <h2 class="section-title">
-        <span class="c">//</span> le studio
-        <span class="title-tag">[ 4 à 5 apps · 12 mois ]</span>
-      </h2>
-
-      <div class="prose">
-        <p>
-          HOLISTIC&nbsp;DEVELOPMENT devient aussi un <strong>studio d'applications mobiles</strong>.
-          Quatre à cinq apps sur les douze prochains mois, dans des univers différents mais
-          avec le même ADN : le mouvement, le monde réel, le jeu, et de l'IA
-          <span class="dim">là où elle sert vraiment à quelque chose.</span>
+      <a class="gate gate-studio" href="studio.html">
+        <p class="gate-path">~/studio</p>
+        <h2>Le studio</h2>
+        <p class="gate-desc">
+          Quatre à cinq applications mobiles sur les douze prochains mois. Des apps qui
+          vous font lever du canapé plutôt que scroller dessus : le mouvement, le monde
+          réel, le jeu, et de l'IA seulement là où elle sert vraiment.
         </p>
-        <p>
-          Les noms, les captures et les dates de sortie viendront quand ce sera prêt.
-          En attendant : <span class="accent">ça mijote, et c'est classifié.</span>
+        <p class="gate-foot">
+          <span class="gate-tag">[ 5 apps · noms classifiés ]</span>
+          <span class="gate-go">ouvrir <span class="arrow">→</span></span>
         </p>
-      </div>
+      </a>
 
-      <div class="terminal studio-term">
-        <div class="term-bar">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          <span class="term-title">holistic@dev: ~/studio</span>
-        </div>
-        <div class="term-body">
-          <p><span class="prompt">holistic@dev:~/studio$</span> ./status.sh</p>
+      <a class="gate gate-services" href="services.html">
+        <p class="gate-path">~/services</p>
+        <h2>Les services</h2>
+        <p class="gate-desc">
+          Ingénierie logicielle freelance et modèles d'IA sur mesure : machine learning,
+          deep learning, du problème métier mal défini jusqu'au modèle qui tient en
+          production. Et des formations, parce que transmettre fait partie du métier.
+        </p>
+        <p class="gate-foot">
+          <span class="gate-tag">[ freelance · 10+ ans ]</span>
+          <span class="gate-go">ouvrir <span class="arrow">→</span></span>
+        </p>
+      </a>
 
-          <ul class="studio-list">
-            <li class="studio-row">
-              <span class="s-idx">01</span>
-              <span class="redacted" role="img" aria-label="nom confidentiel">█████████████</span>
-              <span class="st st-concept">concept</span>
-            </li>
-            <li class="studio-row">
-              <span class="s-idx">02</span>
-              <span class="redacted" role="img" aria-label="nom confidentiel">█████████</span>
-              <span class="st st-concept">concept</span>
-            </li>
-            <li class="studio-row">
-              <span class="s-idx">03</span>
-              <span class="redacted" role="img" aria-label="nom confidentiel">███████████████</span>
-              <span class="st st-concept">concept</span>
-            </li>
-            <li class="studio-row">
-              <span class="s-idx">04</span>
-              <span class="redacted" role="img" aria-label="nom confidentiel">███████</span>
-              <span class="st st-concept">concept</span>
-            </li>
-            <li class="studio-row">
-              <span class="s-idx">05</span>
-              <span class="redacted" role="img" aria-label="nom confidentiel">███████████</span>
-              <span class="st st-concept">concept</span>
-            </li>
-          </ul>
-
-          <p class="out"><span class="hash">#</span> 5 apps · noms classifiés jusqu'à la sortie</p>
-
-          <p class="term-spaced"><span class="prompt">holistic@dev:~/studio$</span> cat .gitignore</p>
-          <p class="out"><span class="hash">#</span> tout, pour le moment.</p>
-        </div>
-      </div>
-
-      <p class="legend">
-        <span class="st st-concept">concept</span>
-        <span class="arrow">→</span>
-        <span class="st st-dev">en dev</span>
-        <span class="arrow">→</span>
-        <span class="st st-beta">bêta</span>
-        <span class="arrow">→</span>
-        <span class="st st-live">en ligne</span>
-      </p>
-
-      <h3 class="sub-title"><span class="c">//</span> l'ADN du studio</h3>
-      <div class="dna-grid">
-        <article class="dna">
-          <h4>Mouvement &amp; corps</h4>
-          <p>Des apps qui vous font lever du canapé, plutôt que scroller dessus.</p>
-        </article>
-        <article class="dna">
-          <h4>Monde réel</h4>
-          <p>Géolocalisation, terrain, conditions du moment. L'écran n'est pas la destination.</p>
-        </article>
-        <article class="dna">
-          <h4>Gamification</h4>
-          <p>Progression, défis, l'envie de revenir. Sans les dark patterns.</p>
-        </article>
-        <article class="dna">
-          <h4>IA embarquée</h4>
-          <p>Quand elle apporte quelque chose. Jamais pour le buzzword.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============ SERVICES ============ -->
-    <section id="services" class="section">
-      <h2 class="section-title">
-        <span class="c">//</span> les services
-        <span class="title-tag">[ freelance · IA · ingénierie · formation ]</span>
-      </h2>
-      <div class="cards">
-
-        <article class="card">
-          <p class="card-path">~/models</p>
-          <h3>Modèles d'IA sur mesure</h3>
-          <p>
-            Machine learning, deep learning, du classifieur au réseau de neurones bien
-            profond. Entraînés, validés et documentés pour votre cas, pas un
-            <code>model.fit()</code> collé au hasard.
-          </p>
-        </article>
-
-        <article class="card">
-          <p class="card-path">~/engineering</p>
-          <h3>Ingénierie logicielle</h3>
-          <p>
-            APIs, back-ends, data pipelines, outils internes. L'IA c'est bien, mais
-            sans plomberie solide autour, ça reste une démo. Je fais les deux.
-          </p>
-        </article>
-
-        <article class="card">
-          <p class="card-path">~/production</p>
-          <h3>Du notebook à la prod</h3>
-          <p>
-            Un notebook qui tourne <span class="ne">&ne;</span> un produit. Je fais le pont :
-            packaging, déploiement, monitoring, MLOps. Bref, que ça survive après la démo.
-          </p>
-        </article>
-
-        <article class="card">
-          <p class="card-path">~/advice</p>
-          <h3>Conseil &amp; architecture</h3>
-          <p>
-            Parfois le meilleur service, c'est un avis honnête sur la faisabilité,
-            <span class="dim">avant</span> de cramer le budget GPU. Cadrage, choix techniques,
-            second regard.
-          </p>
-        </article>
-
-        <article class="card card-wide">
-          <p class="card-path">~/training</p>
-          <h3>Formations IA &amp; ML</h3>
-          <p>
-            Je suis aussi <strong>formateur</strong> : je dispense des formations sur
-            l'intelligence artificielle et le machine learning, du concept qui tient la
-            route jusqu'aux mains dans le code. Parce que transmettre, c'est la moitié
-            du métier.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ============ STACK ============ -->
-    <section id="stack" class="section">
-      <h2 class="section-title"><span class="c">//</span> stack &amp; outils</h2>
-      <p class="prose slim">Les briques que j'utilise le plus. La liste bouge selon le projet : l'outil sert le problème, jamais l'inverse.</p>
-
-      <div class="stack-group">
-        <p class="stack-label">$ IA / ML</p>
-        <ul class="tags">
-          <li>Python</li><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li>
-          <li>NumPy</li><li>Pandas</li><li>Hugging&nbsp;Face</li><li>ONNX</li>
-        </ul>
-      </div>
-
-      <div class="stack-group">
-        <p class="stack-label">$ mobile <span class="stack-note"># framework : en cours d'arbitrage</span></p>
-        <ul class="tags">
-          <li>iOS</li><li>Android</li><li>Géolocalisation</li><li>Capteurs</li>
-          <li>Temps&nbsp;réel</li><li>Offline-first</li><li>IA&nbsp;embarquée</li>
-        </ul>
-      </div>
-
-      <div class="stack-group">
-        <p class="stack-label">$ ingénierie / ops</p>
-        <ul class="tags">
-          <li>FastAPI</li><li>Docker</li><li>PostgreSQL</li><li>Git</li>
-          <li>Linux</li><li>CI/CD</li><li>Cloud</li><li>SQL</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ POURQUOI ============ -->
-    <section id="pourquoi" class="section">
-      <h2 class="section-title"><span class="c">//</span> pourquoi « holistic » ?</h2>
-      <div class="prose">
-        <blockquote>
-          <p>
-            <span class="accent">Holistique</span>, c'est regarder le tout plutôt que la pièce
-            détachée. Et ça marche dans les deux sens.
-          </p>
-          <p>
-            <strong>Côté ingénierie</strong>, c'est le système entier : un modèle d'IA n'existe
-            jamais tout seul. Il vit au milieu de données, d'utilisateurs, de contraintes métier,
-            de serveurs qui tombent à 3h du matin.
-          </p>
-          <p>
-            <strong>Côté studio</strong>, c'est l'humain entier : le corps, le mouvement, le
-            terrain, le plaisir de jouer. Mes apps ne cherchent pas à vous garder sur le canapé,
-            plutôt l'inverse.
-          </p>
-          <p>
-            Même mot, deux lectures. C'est comme ça qu'on livre quelque chose qui
-            <strong>tient</strong>.
-          </p>
-        </blockquote>
-      </div>
     </section>
 
   </main>

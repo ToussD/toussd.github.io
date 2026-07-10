@@ -229,8 +229,14 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 2.4
 .term-live { margin-top: 0.2rem; }
 /* la sortie de `ls` s'écrit sur plusieurs lignes de source : on neutralise le pre-wrap
    (sélecteur assez spécifique pour battre `.term-body p`) */
-.term-body p.ls-out { white-space: normal; }
-.term-body p.ls-out .redacted { margin-right: 0.3rem; }
+.term-body p.dir-out { white-space: normal; }
+.dir-out .dir { margin-right: 1.2rem; }
+.dir {
+  color: var(--accent-3);
+  font-weight: 500;
+  border-bottom: 1px dashed transparent;
+}
+.dir:hover { color: var(--accent); border-bottom-color: var(--accent); }
 #typed { color: var(--txt); }
 .cursor { color: var(--accent); animation: blink 1.1s steps(1) infinite; }
 
@@ -274,86 +280,79 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 2.4
 .whoami-quote::before { content: "> "; color: var(--txt-mute); }
 .whoami-track { margin-top: 1.1rem; font-size: 0.85rem; color: var(--txt); }
 
-/* ---------- Studio ---------- */
-.studio-term { margin-top: 2rem; }
-.term-spaced { margin-top: 1rem; }
+/* ---------- Hub (page d'accueil) ---------- */
+.hub-hero {
+  padding: clamp(3rem, 9vw, 6rem) 0 clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+}
+.hub-hero h1 {
+  font-size: clamp(2.4rem, 8vw, 4.4rem);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.3rem;
+}
+.hub-hero h1 .accent { color: var(--accent); }
+.hub-hero .lede { max-width: 62ch; margin: 0 auto; }
 
-.studio-list { list-style: none; margin: 0.55rem 0 0.35rem; }
-.studio-row {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 0.26rem 0;
-}
-.s-idx { color: var(--txt-mute); font-size: 0.8rem; }
-
-/* noms caviardés : lisibles comme des blocs, jamais copiables */
-.redacted {
-  color: var(--line-2);
-  letter-spacing: -0.04em;
-  user-select: none;
-}
-@supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  .redacted {
-    background-image: linear-gradient(
-      100deg,
-      var(--line-2) 0%, var(--line-2) 42%,
-      #3c4a63 50%,
-      var(--line-2) 58%, var(--line-2) 100%
-    );
-    background-size: 260% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: sweep 7s linear infinite;
-  }
-}
-@keyframes sweep {
-  from { background-position: 160% 0; }
-  to   { background-position: -60% 0; }
+.hub-term {
+  max-width: 720px;
+  margin: clamp(2.2rem, 6vw, 3.4rem) auto 0;
+  text-align: left;
 }
 
-/* badges de statut */
-.st {
-  justify-self: end;
-  white-space: nowrap;
-  font-size: 0.72rem;
-  line-height: 1.5;
-  padding: 0.1rem 0.5rem;
-  border-radius: 4px;
-  border: 1px solid var(--line-2);
-  color: var(--txt-dim);
-}
-.st-dev  { color: var(--accent-2); border-color: rgba(255,180,84,0.35);  background: rgba(255,180,84,0.07); }
-.st-beta { color: var(--accent-3); border-color: rgba(122,162,247,0.35); background: rgba(122,162,247,0.07); }
-.st-live { color: var(--accent);   border-color: rgba(95,242,192,0.35);  background: rgba(95,242,192,0.07); }
-
-.legend {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.1rem;
-  font-size: 0.8rem;
-}
-.legend .arrow { color: var(--txt-mute); }
-
-/* ADN du studio */
-.dna-grid {
+/* les deux portes */
+.gates {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  padding-bottom: clamp(3rem, 8vw, 5rem);
 }
-.dna {
+.gate {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, var(--bg-1), var(--bg));
   border: 1px solid var(--line);
-  border-left: 2px solid var(--accent);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  background: var(--bg-1);
-  padding: 1rem 1.1rem;
+  border-radius: var(--radius);
+  padding: 1.6rem 1.5rem 1.3rem;
+  color: var(--txt);
+  transition: border-color .2s ease, transform .15s ease, box-shadow .2s ease;
 }
-.dna h4 { font-size: 0.92rem; font-weight: 700; margin-bottom: 0.35rem; }
-.dna p { color: var(--txt-dim); font-size: 0.87rem; line-height: 1.55; }
+.gate:hover {
+  color: var(--txt);
+  border-color: var(--line-2);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px -26px rgba(0,0,0,0.9);
+}
+.gate-path { font-size: 0.78rem; margin-bottom: 0.7rem; opacity: 0.85; }
+.gate h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.6rem; }
+.gate-desc { flex: 1; color: var(--txt-dim); font-size: 0.92rem; }
+.gate-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.78rem;
+}
+.gate-tag { color: var(--txt-mute); }
+.gate-go { font-weight: 600; }
+.gate .arrow { display: inline-block; transition: transform .18s ease; }
+.gate:hover .arrow { transform: translateX(4px); }
+
+/* le studio annonce déjà sa couleur (ambre), les services gardent la menthe */
+.gate-studio .gate-path,
+.gate-studio .gate-go { color: var(--accent-2); }
+.gate-studio:hover { border-color: rgba(255,180,84,0.45); }
+.gate-services .gate-path,
+.gate-services .gate-go { color: var(--accent); }
+.gate-services:hover { border-color: rgba(95,242,192,0.45); }
+
+/* ---------- Contact ---------- */
+.contact-line { margin-top: 1.5rem; font-size: 1rem; }
+.contact-line .prompt { margin-right: 0.55rem; }
 
 /* ---------- Cards ---------- */
 .cards {
@@ -432,13 +431,13 @@ blockquote strong { color: var(--txt); }
   .whoami-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .portrait { max-width: 320px; }
   .cards { grid-template-columns: 1fr; }
-  .dna-grid { grid-template-columns: 1fr; }
+  .gates { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .title-tag { margin-left: 0; flex-basis: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .caret, .cursor, .redacted { animation: none; }
+  .caret, .cursor { animation: none; }
   * { transition: none !important; }
 }

@@ -7,6 +7,24 @@
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* -------- Anciennes ancres du site une-page → nouvelles pages --------
+     Le contenu a été éclaté en index / studio / services : on ne casse pas
+     les liens déjà indexés ni les favoris. */
+  if (document.body.dataset.page === "hub") {
+    const moved = {
+      "#studio": "studio.html",
+      "#services": "services.html",
+      "#whoami": "services.html#whoami",
+      "#stack": "services.html#stack",
+      "#pourquoi": "services.html#pourquoi",
+    };
+    const destination = moved[window.location.hash];
+    if (destination) {
+      window.location.replace(destination);
+      return;
+    }
+  }
+
   /* -------- Année du footer -------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -21,13 +39,21 @@
   /* -------- Effet de frappe dans le terminal -------- */
   const typedEl = document.getElementById("typed");
   if (typedEl) {
-    const commands = [
+    let commands = [
       "python train.py --probleme votre_cas",
-      "git init studio/████████",
-      "git commit -m 'ça compile ET ça marche'",
       "./deploy.sh --et-ca-tient-en-prod",
       "make coffee && think",
     ];
+
+    // chaque page peut fournir ses propres commandes via data-commands
+    if (typedEl.dataset.commands) {
+      try {
+        const custom = JSON.parse(typedEl.dataset.commands);
+        if (Array.isArray(custom) && custom.length) commands = custom;
+      } catch (err) {
+        console.warn("data-commands illisible, liste par défaut utilisée.", err);
+      }
+    }
 
     if (reduceMotion) {
       typedEl.textContent = commands[0];
